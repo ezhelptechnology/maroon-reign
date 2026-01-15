@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maroon Reign | Premium Luxury Streetwear</title>
+    <meta name="description" content="Where heritage meets the future. Premium luxury streetwear crafted for the modern era. Shop the 2026 Collection.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="crown-icon" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 0L25 10L35 5L30 20H10L5 5L15 10L20 0Z" fill="#F5C518"/>
+                    <rect x="8" y="22" width="24" height="4" rx="1" fill="#F5C518"/>
+                </svg>
+                <span>Maroon Reign</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#collection">Collection</a>
+                <a href="#about">About</a>
+                <a href="admin.html" class="admin-link">Admin</a>
+            </nav>
+            <button class="cart-btn" id="cartBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                Cart
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">2026 Collection</h1>
+            <p class="hero-subtitle">Where heritage meets the future. Premium luxury streetwear crafted for the modern era.</p>
+            <span class="premium-badge">PREMIUM QUALITY</span>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="collection">
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be injected by JavaScript -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>The Reign Legacy</h2>
+            <p>Founded on the principles of heritage and innovation, Maroon Reign represents the pinnacle of luxury streetwear. Each piece is meticulously crafted with premium materials, blending traditional African artistry with contemporary urban aesthetics.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Premium Cotton</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">Collection Year</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Heritage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <svg class="crown-icon" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 0L25 10L35 5L30 20H10L5 5L15 10L20 0Z" fill="#F5C518"/>
+                    <rect x="8" y="22" width="24" height="4" rx="1" fill="#F5C518"/>
+                </svg>
+                <span>Maroon Reign</span>
+            </div>
+            <p class="footer-tagline">Reign Supreme. Dress Royal.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="copyright">© 2026 Maroon Reign. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                Your Cart
+            </h2>
+            <button class="close-cart" id="closeCart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                    <line x1="1" y1="10" x2="23" y2="10"/>
+                </svg>
+                Checkout with Stripe
+            </button>
+        </div>
+    </aside>
+
+    <!-- Stripe Checkout Modal -->
+    <div class="modal-overlay" id="stripeModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="stripe-demo">
+                <div class="stripe-header">
+                    <svg width="60" height="25" viewBox="0 0 60 25" fill="none">
+                        <path d="M5 12.5C5 8.358 8.358 5 12.5 5H47.5C51.642 5 55 8.358 55 12.5C55 16.642 51.642 20 47.5 20H12.5C8.358 20 5 16.642 5 12.5Z" fill="#635BFF"/>
+                        <text x="15" y="16" fill="white" font-family="Inter" font-size="10" font-weight="600">stripe</text>
+                    </svg>
+                    <p>Secure Payment Demo</p>
+                </div>
+                <div class="stripe-info">
+                    <h3>Stripe Integration Ready</h3>
+                    <p>This is a demo checkout. In production, this would connect to Stripe's secure payment gateway.</p>
+                    <div class="stripe-config">
+                        <h4>Configuration Required:</h4>
+                        <code>
+STRIPE_PUBLISHABLE_KEY=pk_test_xxxxx<br>
+STRIPE_SECRET_KEY=sk_test_xxxxx<br>
+STRIPE_WEBHOOK_SECRET=whsec_xxxxx
+                        </code>
+                    </div>
+                    <div class="stripe-links">
+                        <a href="https://stripe.com" target="_blank" class="stripe-btn primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                            Visit Stripe.com
+                        </a>
+                        <a href="https://dashboard.stripe.com" target="_blank" class="stripe-btn secondary">
+                            Stripe Dashboard
+                        </a>
+                    </div>
+                </div>
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    <div id="modalOrderItems"></div>
+                    <div class="modal-total">
+                        <span>Total</span>
+                        <span id="modalTotal">$0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

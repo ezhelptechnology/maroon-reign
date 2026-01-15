@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal | Maroon Reign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <svg class="crown-icon" viewBox="0 0 40 30" fill="none"><path d="M20 0L25 10L35 5L30 20H10L5 5L15 10L20 0Z" fill="#F5C518"/><rect x="8" y="22" width="24" height="4" rx="1" fill="#F5C518"/></svg>
+                <span>Maroon Reign</span>
+            </a>
+            <span class="admin-badge">ADMIN</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-tab="dashboard"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</a>
+            <a href="#" class="nav-item" data-tab="products"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Products</a>
+            <a href="#" class="nav-item" data-tab="orders"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Orders</a>
+            <a href="#" class="nav-item" data-tab="stripe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Stripe Settings</a>
+            <a href="#" class="nav-item" data-tab="settings"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="back-to-store"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back to Store</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar">
+            <h1 id="pageTitle">Dashboard</h1>
+            <div class="top-bar-actions">
+                <span class="date-display" id="dateDisplay"></span>
+                <div class="admin-user"><div class="avatar">MR</div><span>Admin</span></div>
+            </div>
+        </header>
+
+        <!-- Dashboard Tab -->
+        <section class="tab-content active" id="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-icon revenue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="stat-info"><span class="stat-label">Total Revenue</span><span class="stat-value" id="totalRevenue">$0</span></div></div>
+                <div class="stat-card"><div class="stat-icon orders"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div><div class="stat-info"><span class="stat-label">Total Orders</span><span class="stat-value" id="totalOrders">0</span></div></div>
+                <div class="stat-card"><div class="stat-icon products"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div><div class="stat-info"><span class="stat-label">Products</span><span class="stat-value" id="totalProducts">6</span></div></div>
+                <div class="stat-card"><div class="stat-icon visitors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="stat-info"><span class="stat-label">Visitors Today</span><span class="stat-value">847</span></div></div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="card recent-orders"><h3>Recent Orders</h3><div class="orders-list" id="recentOrdersList"><p class="empty-state">No orders yet</p></div></div>
+                <div class="card quick-actions"><h3>Quick Actions</h3><div class="actions-list"><button class="action-btn" onclick="switchTab('products')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add Product</button><button class="action-btn" onclick="switchTab('orders')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>View Orders</button><a href="https://dashboard.stripe.com" target="_blank" class="action-btn stripe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Stripe Dashboard</a></div></div>
+            </div>
+        </section>
+
+        <!-- Products Tab -->
+        <section class="tab-content" id="products">
+            <div class="section-header"><h2>Product Management</h2><button class="primary-btn" onclick="openProductModal()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add Product</button></div>
+            <div class="products-table-container"><table class="data-table"><thead><tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead><tbody id="productsTableBody"></tbody></table></div>
+        </section>
+
+        <!-- Orders Tab -->
+        <section class="tab-content" id="orders">
+            <div class="section-header"><h2>Order Management</h2><div class="filter-group"><select id="orderFilter"><option value="all">All Orders</option><option value="pending">Pending</option><option value="processing">Processing</option><option value="shipped">Shipped</option><option value="delivered">Delivered</option></select></div></div>
+            <div class="orders-table-container"><table class="data-table"><thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead><tbody id="ordersTableBody"></tbody></table></div>
+        </section>
+
+        <!-- Stripe Tab -->
+        <section class="tab-content" id="stripe">
+            <div class="section-header"><h2>Stripe Integration</h2><a href="https://stripe.com" target="_blank" class="primary-btn stripe-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Visit Stripe.com</a></div>
+            <div class="stripe-grid">
+                <div class="card api-keys"><h3>API Keys <span class="demo-badge">Demo Mode</span></h3><div class="form-group"><label>Publishable Key</label><div class="key-input"><input type="text" id="stripePublishableKey" value="pk_test_51..." readonly><button class="copy-btn" onclick="copyKey('stripePublishableKey')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div></div><div class="form-group"><label>Secret Key</label><div class="key-input"><input type="password" id="stripeSecretKey" value="sk_test_51..." readonly><button class="copy-btn" onclick="copyKey('stripeSecretKey')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div></div><div class="form-group"><label>Webhook Secret</label><div class="key-input"><input type="password" id="stripeWebhookSecret" value="whsec_..." readonly><button class="copy-btn" onclick="copyKey('stripeWebhookSecret')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div></div><p class="help-text">Get your API keys from the <a href="https://dashboard.stripe.com/apikeys" target="_blank">Stripe Dashboard</a></p></div>
+                <div class="card webhook-info"><h3>Webhook Endpoint</h3><div class="webhook-url"><code>https://your-domain.com/api/stripe/webhook</code><button class="copy-btn" onclick="copyText('https://your-domain.com/api/stripe/webhook')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div><h4>Events to Listen For:</h4><ul class="event-list"><li>checkout.session.completed</li><li>payment_intent.succeeded</li><li>payment_intent.payment_failed</li></ul></div>
+                <div class="card stripe-status"><h3>Connection Status</h3><div class="status-indicator"><span class="status-dot demo"></span><span>Demo Mode</span></div><p>Connect your Stripe account to accept live payments.</p><a href="https://dashboard.stripe.com" target="_blank" class="secondary-btn">Open Stripe Dashboard</a></div>
+            </div>
+        </section>
+
+        <!-- Settings Tab -->
+        <section class="tab-content" id="settings">
+            <div class="section-header"><h2>Store Settings</h2></div>
+            <div class="settings-grid">
+                <div class="card"><h3>General Settings</h3><div class="form-group"><label>Store Name</label><input type="text" value="Maroon Reign"></div><div class="form-group"><label>Store Email</label><input type="email" value="admin@maroonreign.com"></div><div class="form-group"><label>Currency</label><select><option value="USD">USD ($)</option><option value="EUR">EUR (€)</option><option value="GBP">GBP (£)</option></select></div><button class="primary-btn">Save Changes</button></div>
+                <div class="card"><h3>Admin Access</h3><div class="form-group"><label>Admin Email</label><input type="email" value="admin@maroonreign.com"></div><div class="form-group"><label>New Password</label><input type="password" placeholder="Enter new password"></div><div class="form-group"><label>Confirm Password</label><input type="password" placeholder="Confirm password"></div><button class="primary-btn">Update Password</button></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-content"><button class="modal-close" onclick="closeProductModal()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><h2 id="modalTitle">Add New Product</h2><form id="productForm"><div class="form-group"><label>Product Name</label><input type="text" id="productName" required></div><div class="form-row"><div class="form-group"><label>Price ($)</label><input type="number" id="productPrice" min="0" step="0.01" required></div><div class="form-group"><label>Stock</label><input type="number" id="productStock" min="0" required></div></div><div class="form-group"><label>Category</label><select id="productCategory"><option value="classic">Classic</option><option value="signature">Signature</option><option value="limited">Limited</option><option value="streetwear">Streetwear</option><option value="premium">Premium</option><option value="heritage">Heritage</option></select></div><div class="form-group"><label>Description</label><textarea id="productDescription" rows="3"></textarea></div><div class="form-group"><label>Image URL</label><input type="url" id="productImage" placeholder="https://..."></div><div class="form-actions"><button type="button" class="secondary-btn" onclick="closeProductModal()">Cancel</button><button type="submit" class="primary-btn">Save Product</button></div></form></div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
