@@ -9,8 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+    
+    <!-- Particle Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
     <!-- Header -->
     <header class="header">
         <div class="header-container">
@@ -38,14 +61,25 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">2026 Collection</h1>
-            <p class="hero-subtitle">Where heritage meets the future. Premium luxury streetwear crafted for the modern era.</p>
-            <span class="premium-badge">PREMIUM QUALITY</span>
+    <!-- Hero Section with Video Background -->
+    <section class="hero" id="hero">
+        <!-- Video Background -->
+        <div class="video-container">
+            <video class="hero-video" autoplay muted loop playsinline id="heroVideo">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-person-in-a-black-outfit-and-sneakers-walking-43238-large.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
         </div>
-        <div class="hero-gradient"></div>
+        
+        <!-- Parallax Layers -->
+        <div class="parallax-layer layer-1"></div>
+        <div class="parallax-layer layer-2"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title" data-scroll>2026 Collection</h1>
+            <p class="hero-subtitle" data-scroll>Where heritage meets the future. Premium luxury streetwear crafted for the modern era.</p>
+            <span class="premium-badge" data-scroll>PREMIUM QUALITY</span>
+        </div>
     </section>
 
     <!-- Products Section -->
@@ -188,6 +222,7 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxxx
         </div>
     </div>
 
+    <script src="futuristic.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
