@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
     
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -222,7 +223,122 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxxx
         </div>
     </div>
 
+    <!-- Egyptian Crown AI Chatbot -->
+    <div class="crown-chatbot" id="crownChatbot">
+        <!-- Crown Toggle Button -->
+        <button class="crown-toggle" id="crownToggle" aria-label="Toggle AI Assistant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+            <span class="notification-badge">3</span>
+        </button>
+
+        <!-- Crown Container -->
+        <div class="crown-container">
+            <!-- Egyptian Crown SVG -->
+            <svg class="crown-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                <!-- Crown Base -->
+                <path class="crown-outline" d="M50,450 L350,450 L340,400 L300,400 L290,380 L270,380 L260,400 L140,400 L130,380 L110,380 L100,400 L60,400 Z"/>
+                
+                <!-- Crown Body -->
+                <path class="crown-outline" d="
+                    M80,400 
+                    L90,350 
+                    L100,320 
+                    L110,280 
+                    L120,240 
+                    L130,200 
+                    L140,160 
+                    L150,120 
+                    L160,100 
+                    L180,80 
+                    L200,70 
+                    L220,80 
+                    L240,100 
+                    L250,120 
+                    L260,160 
+                    L270,200 
+                    L280,240 
+                    L290,280 
+                    L300,320 
+                    L310,350 
+                    L320,400 Z
+                "/>
+                
+                <!-- Crown Peaks -->
+                <path class="crown-outline" d="M140,160 L150,100 L160,120 L170,80 L180,110 L190,70 L200,50 L210,70 L220,110 L230,80 L240,120 L250,100 L260,160"/>
+                
+                <!-- Decorative Elements -->
+                <circle class="crown-accent" cx="200" cy="50" r="8"/>
+                <circle class="crown-accent" cx="170" cy="80" r="5"/>
+                <circle class="crown-accent" cx="230" cy="80" r="5"/>
+                <circle class="crown-accent" cx="180" cy="110" r="4"/>
+                <circle class="crown-accent" cx="220" cy="110" r="4"/>
+                
+                <!-- Crown Highlights -->
+                <path class="crown-highlight" d="M160,120 L150,140 L155,155 L165,145 Z"/>
+                <path class="crown-highlight" d="M240,120 L250,140 L245,155 L235,145 Z"/>
+                <path class="crown-highlight" d="M200,80 L195,100 L205,100 Z"/>
+                
+                <!-- Side Ornaments -->
+                <path class="crown-outline" d="M120,240 L110,250 L115,265 L125,255 Z"/>
+                <path class="crown-outline" d="M280,240 L290,250 L285,265 L275,255 Z"/>
+                
+                <!-- Additional Decorative Lines -->
+                <line class="crown-highlight" x1="140" y1="200" x2="260" y2="200"/>
+                <line class="crown-highlight" x1="130" y1="280" x2="270" y2="280"/>
+                <line class="crown-highlight" x1="110" y1="350" x2="290" y2="350"/>
+            </svg>
+
+            <!-- Mobile Phone Viewport -->
+            <div class="mobile-viewport">
+                <!-- Phone Notch -->
+                <div class="phone-notch">
+                    <div class="notch-camera"></div>
+                    <div class="notch-speaker"></div>
+                </div>
+
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <div class="chat-avatar">👑</div>
+                    <div class="chat-info">
+                        <h3 class="chat-title">Maroon Reign AI</h3>
+                        <div class="chat-status">
+                            <span class="status-dot"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be added dynamically -->
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-area">
+                    <input 
+                        type="text" 
+                        class="chat-input" 
+                        id="chatInput" 
+                        placeholder="Ask about our collection..."
+                        autocomplete="off"
+                    >
+                    <button class="send-btn" id="chatSendBtn" aria-label="Send message">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="futuristic.js"></script>
     <script src="app.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 </html>

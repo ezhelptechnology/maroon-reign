@@ -246,7 +246,7 @@ function addColorSwatches() {
     const products = document.querySelectorAll('.product-card');
     
     products.forEach((product, index) => {
-        const colors = ['#2a0a0a', '#ffffff'];
+        const colors = ['#ffffff', '#800020'];
         const swatchContainer = document.createElement('div');
         swatchContainer.className = 'color-swatches';
         
